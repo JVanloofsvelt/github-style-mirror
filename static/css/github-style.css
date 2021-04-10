@@ -135,6 +135,19 @@ body {
   }
 }
 
+@media (min-width: 480px) {
+  .non-mobile-none {
+    display: none!important;
+  }
+}
+
 .pinned-item-desc img {
   max-width: 100%;
+}
+
+
+.UnderlineNav-item.selected,
+.UnderlineNav-item[aria-current]:not([aria-current=false]),
+.UnderlineNav-item[role=tab][aria-selected=true] {
+ border-bottom-color:#ff9900;
 }

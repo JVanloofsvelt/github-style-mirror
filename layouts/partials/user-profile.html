@@ -44,7 +44,7 @@
           </div>
         </div>
 
-        <div class="p-note user-profile-bio mb-3 js-user-profile-bio f4">
+        <div class="p-note user-profile-bio mb-3 js-user-profile-bio f4 hide-md hide-sm">
           <div>{{ .Site.Params.Description }}</div>
         </div>
 
@@ -52,7 +52,7 @@
           <div class="js-profile-editable-area d-flex flex-column d-md-block">
             <ul class="vcard-details">
               {{ if .Site.Params.location }}
-              <li class="vcard-detail pt-1 css-truncate css-truncate-target hide-sm hide-md">
+              <li class="vcard-detail pt-1 css-truncate css-truncate-target hide-md hide-sm">
                 <svg class="octicon octicon-location" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                   <path fill-rule="evenodd"
                     d="M11.536 3.464a5 5 0 010 7.072L8 14.07l-3.536-3.535a5 5 0 117.072-7.072v.001zm1.06 8.132a6.5 6.5 0 10-9.192 0l3.535 3.536a1.5 1.5 0 002.122 0l3.535-3.536zM8 9a2 2 0 100-4 2 2 0 000 4z">
@@ -73,7 +73,8 @@
               </li>
               {{ end }}
 
-              <li class="vcard-detail pt-1 css-truncate css-truncate-target ">
+              <!--
+                <li class="vcard-detail pt-1 css-truncate css-truncate-target ">
                 <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                   <path fill-rule="evenodd"
                     d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
@@ -84,16 +85,16 @@
                 {{ else }}
                 <a rel="nofollow me" class="link-gray-dark" href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a>
                 {{ end }}
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
 
-        <div class="border-top color-border-secondary pt-3 mt-3 clearfix hide-sm hide-md">
-          <h2 class="mb-2 h4">Organizations</h2>
+        <div class="border-md-top color-border-secondary pt-md-3 mt-md-3 clearfix">
+          <h2 class="mb-2 h4 hide-md hide-sm">Links</h2>
           {{ if .Site.Params.github}}
           <a class="avatar-group-item" href="https://github.com/{{ .Site.Params.github }}">
-            <img alt="@github" width="32" height="32" src="{{ "images/github.png" | absURL }}" class="avatar">
+            <img alt="@github" width="32" height="32" src="{{ "images/github-dark.png" | absURL }}" class="avatar">
           </a>
           {{ end }}
 
