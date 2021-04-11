@@ -23,7 +23,7 @@
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:site_name" content="{{ .Title }}" />
 <meta property="og:image"
-  content="{{ if .IsHome }}{{ $.Site.Params.avatar | absURL }}{{ else }}{{ .Params.Cover | absURL }}{{ end }}">
+  content="{{ if .IsHome }}{{ $.Site.Params.avatarOg | absURL }}{{ else }}{{ .Params.Cover | absURL }}{{ end }}">
 <meta property="og:image:width" content="460">
 <meta property="og:image:height" content="460">
 {{ if isset .Params "date" }}
