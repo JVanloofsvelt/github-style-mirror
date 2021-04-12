@@ -11,7 +11,7 @@ let contributions;
   }
 
   contributions = JSON.parse(dom.getAttribute('data'));
-  let year = 0;
+  let year = now.getFullYear();
   for (const item of contributions) {
     item.publishDate = decodeURI(item.publishDate).replace(' ', 'T');
     item.date = new Date(item.publishDate);
