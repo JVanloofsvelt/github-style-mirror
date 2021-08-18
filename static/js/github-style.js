@@ -80,7 +80,7 @@ function monthly(year, month, posts) {
       class="col-8 css-truncate css-truncate-target lh-condensed width-fit flex-auto min-width-0">
       <a href="${post.link}">${post.title}</a>
     </div>
-    <time  title="This post was made on ${months[post.date.getMonth()]} ${post.date.getDate()}"
+    <time  title="This article was made on ${months[post.date.getMonth()]} ${post.date.getDate()}"
       class="col-2 text-right f6 text-gray-light pt-1">
       ${months[post.date.getMonth()]} ${post.date.getDate()}
     </time>
@@ -106,7 +106,7 @@ function monthly(year, month, posts) {
           <details class="Details-element details-reset" open>
             <summary role="button" class="btn-link f4 muted-link no-underline lh-condensed width-full">
               <span class="color-text-primary ws-normal text-left">
-                Created ${monthPosts.length} post${monthPosts.length > 1 ? 's' : ''}
+                Created ${monthPosts.length} article${monthPosts.length > 1 ? 's' : ''}
               </span>
               <span class="d-inline-block float-right color-icon-secondary">
                 <span class="Details-content--open float-right">
@@ -156,7 +156,7 @@ function yearList() {
 }
 
 function graph(year, posts, startDate, endDate) {
-  const postsStr = posts.length === 1 ? "post" : "posts";
+  const postsStr = posts.length === 1 ? "article" : "articles";
   if (year == now.getFullYear().toString()) {
     document.querySelector('#posts-count').innerText = `${posts.length}  ${postsStr} in the last year`;
   } else {
@@ -205,14 +205,14 @@ function graph(year, posts, startDate, endDate) {
           color = "var(--color-calendar-graph-day-bg)";
           break;
         case 1:
-          color = "var(--color-calendar-graph-day-L1-bg)";
-          break;
+          //color = "var(--color-calendar-graph-day-L1-bg)";
+          //break;
         case 2:
-          color = "var(--color-calendar-graph-day-L2-bg)";
-          break;
+          //color = "var(--color-calendar-graph-day-L2-bg)";
+          //break;
         case 3:
-          color = "var(--color-calendar-graph-day-L3-bg)";
-          break;
+          //color = "var(--color-calendar-graph-day-L3-bg)";
+          //break;
         default:
           color = "var(--color-calendar-graph-day-L4-bg)";
       }
@@ -261,9 +261,9 @@ function svgTip(elem, count, dateStr) {
   const date = new Date(dateStr);
   const dateFmt = `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
   if (count) {
-    svgElem.innerHTML = `<strong>${count} posts</strong> on ${dateFmt}`;
+    svgElem.innerHTML = `<strong>${count} article</strong> on ${dateFmt}`;
   } else {
-    svgElem.innerHTML = `<strong>No posts</strong> on ${dateFmt}`;
+    svgElem.innerHTML = `<strong>No articles</strong> on ${dateFmt}`;
   }
   svgElem.style.display = 'block';
   const tipRect = svgElem.getBoundingClientRect();
