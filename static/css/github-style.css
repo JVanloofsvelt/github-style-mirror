@@ -151,3 +151,38 @@ body {
 .UnderlineNav-item[role=tab][aria-selected=true] {
  border-bottom-color:#ff9900;
 }
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
+  color: #ff9900;
+  filter: brightness(0.85);
+  margin-bottom: 6px;
+  margin-top: 30px;
+}
+
+.markdown-body .footnotes li > p{
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+
+.markdown-body .footnotes hr {
+  margin-bottom: 8px;
+  margin-top: 30px;
+}
+
+.markdown-body .katex {
+  color: #66d9ef;
+  font-size: 16px;
+}
+
+.markdown-body pre {
+  background-color: #2b303b !important;
+}
+.markdown-body figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.markdown-body img {
+  background-color: #2b303b;
+  border-radius: 6px;
+}
