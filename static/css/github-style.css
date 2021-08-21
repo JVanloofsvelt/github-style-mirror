@@ -186,3 +186,9 @@ body {
   background-color: #2b303b;
   border-radius: 6px;
 }
+
+.utterances {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 2000px;
+}
