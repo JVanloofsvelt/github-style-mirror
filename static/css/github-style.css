@@ -152,6 +152,95 @@ body {
  border-bottom-color:#ff9900;
 }
 
+
+/* The Modal (background) */
+.modal {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  z-index: 1;
+  padding-top: 3em;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  transition: visibility 0.25s, opacity 0.25s;
+}
+
+.modal-content-wrapper {
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 2em;
+  min-width: calc(1000px + 4em);
+}
+
+
+/* Modal Content */
+.modal-content {
+  background-color: #2b303b;
+  margin: auto;
+  padding: 0;
+  width: 95%;
+  min-width: 1000px;
+  max-width: 1400px;
+  border-radius: 6px;
+  display: flex;
+}
+
+.modal-pic {
+  display: flex;
+  align-content: center;
+  cursor: pointer;
+}
+
+/* The Close Button */
+/* Optimized for accessibility by using a button named close but 
+      shifting the close text out of the button and only showing x */
+.modal-close {
+  color: white;
+  background-color: transparent;
+  position: fixed;
+  top: .25em;
+  right: .5em;
+  font-size: 2em;
+  font-weight: bold;
+  height: 1em;
+  width: 1em;
+  text-indent: 10em;
+  overflow: hidden;
+  border: 0;
+}
+
+.modal-close::after {
+  position: absolute;
+  line-height: 0.5;
+  top: 0.2em;
+  left: 0.1em;
+  text-indent: 0;
+  content: "\00D7"
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.markdown-body img[onclick] {
+  cursor: pointer;
+}
+
+
+.markdown-body img[onclick]:hover {
+  box-shadow: 0 0 8px 2px var(--color-scale-gray-4);
+  transition-duration: 150ms;
+  transition-property: box-shadow;
+}
+
+
 .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
   color: #ff9900;
   filter: brightness(0.85);
