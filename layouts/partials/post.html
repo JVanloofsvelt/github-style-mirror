@@ -69,6 +69,12 @@
 
 
               <div class="Box-body px-5 pb-5">
+
+                <aside class="markdown-body toc">
+                  <h4>Table of contents</h4>
+                  {{ .TableOfContents }}
+                </aside>
+
                 <article class="markdown-body entry-content container-lg">
                   {{- .Content -}}
                 </article>

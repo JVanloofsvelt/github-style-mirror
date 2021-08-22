@@ -248,6 +248,10 @@ body {
   margin-top: 30px;
 }
 
+.markdown-body.toc h4 {
+  color: var(--color-text-primary);
+}
+
 .markdown-body .footnotes li > p{
   margin-bottom: 4px;
   margin-top: 4px;
