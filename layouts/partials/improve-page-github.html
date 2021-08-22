@@ -5,7 +5,7 @@
       “{{ .Page.Title }}”
     </a>
     was last updated: {{ .GitInfo.AuthorDate | time.Format ":date_full"  }}:
-    <a href="{{ path.Join .Site.Params.githubRepoUrl "/commit/" .GitInfo.Hash }}">
+    <a href="{{ .Site.Params.githubRepoUrl }}{{ path.Join "/commit/" .GitInfo.Hash }}">
       {{ .GitInfo.Subject }} ({{ .GitInfo.AbbreviatedHash }})
     </a>
   </div>
